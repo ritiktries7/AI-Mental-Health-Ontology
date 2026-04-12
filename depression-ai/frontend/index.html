@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>depression-ai — UI</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>depression-ai</h1>
+
+    <section class="panel">
+      <h2>Free-text prediction</h2>
+      <textarea id="text" placeholder="Write how you're feeling..." rows="4"></textarea>
+      <div class="row">
+        <button id="btn-predict">Predict (ML)</button>
+        <button id="btn-hybrid">Predict (Hybrid: ML + PHQ-9)</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>PHQ-9 (optional — for hybrid)</h2>
+      <p class="muted">Select values 0 (Not at all) to 3 (Nearly every day)</p>
+      <div id="phq9" class="phq-grid"></div>
+    </section>
+
+    <section class="panel results">
+      <h2>Result</h2>
+      <pre id="result">No prediction yet.</pre>
+    </section>
+
+    <footer>
+      <small>Calls the backend endpoints <code>/predict</code> and <code>/hybrid_predict</code>.</small>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
