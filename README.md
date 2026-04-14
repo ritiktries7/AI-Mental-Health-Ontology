@@ -1,20 +1,83 @@
+# 🧠 MindCare AI -- Mental Health Analysis System
 
-# AI-Mental-Health-Ontology
+MindCare AI is a web-based application that analyzes mental health
+using: - 📝 Text-based AI prediction - 📊 PHQ-9 questionnaire scoring -
+🔗 Hybrid analysis combining both
 
-# React + Vite
+It helps identify emotional signals, risk levels, and depression
+severity.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+------------------------------------------------------------------------
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🔹 1. Text Analysis
 
-## React Compiler
+-   Enter your thoughts
+-   AI predicts:
+    -   Risk level (Low / Medium / High)
+    -   Confidence score
+    -   Emotional cues (e.g., fatigue, sadness)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔹 2. Hybrid Analysis (Text + PHQ-9)
 
-## Expanding the ESLint configuration
+-   Combines:
+    -   AI text prediction
+    -   PHQ-9 questionnaire
+-   Provides:
+    -   Combined risk score
+    -   PHQ-9 total score (0--27)
+    -   Severity (Minimal → Severe)
+    -   Detected signals
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔹 3. Clean UI/UX
 
+-   Modern responsive design
+-   Side-by-side layout (Input + Result)
+-   Auto-resizing text input
+-   Calm healthcare-focused theme
+
+------------------------------------------------------------------------
+
+## 🖥️ Tech Stack
+
+Frontend: - React (Vite) - Tailwind CSS
+
+Backend: - FastAPI (Python) - Machine Learning model - Ontology-based
+explanation system
+
+------------------------------------------------------------------------
+
+## ⚙️ Installation & Setup
+
+### Clone the repository
+
+git clone https://github.com/ritiktries7/AI-Mental-Health-Ontology.git
+
+### Install dependencies
+
+npm install
+
+### Run the app
+
+npm run dev
+
+------------------------------------------------------------------------
+
+## 📊 Example API Response
+
+{ "combined_risk": "High", "combined_score": 0.60, "phq_total": 27,
+"phq_severity": "Severe", "ontology_explanation": { "text_cues":
+\["Fatigue"\] } }
+
+------------------------------------------------------------------------
+
+## ⚠️ Disclaimer
+
+This tool is for educational purposes only and not a medical diagnosis.
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
+
+Chirag
