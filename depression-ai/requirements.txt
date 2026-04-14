@@ -1,7 +1,0 @@
-pandas
-scikit-learn
-nltk
-fastapi
-uvicorn
-joblib
-owlready2
