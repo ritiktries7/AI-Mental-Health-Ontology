@@ -12,9 +12,15 @@ export default function ResultPanel({ result }) {
     );
   }
 
-  // ✅ DIRECT FROM BACKEND
-  const risk = result.combined_risk;
-  const score = result.combined_score;
+  // Support both backend response shapes:
+  // - /predict: { risk, score }
+  // - /hybrid_predict: { combined_risk, combined_score, ml_probability, ... }
+  const risk = result.combined_risk ?? result.risk ?? "Unknown";
+  const rawScore = result.combined_score ?? result.score ?? result.ml_probability ?? 0;
+  const numericScore = Number(rawScore);
+  const score = Number.isFinite(numericScore)
+    ? Math.min(Math.max(numericScore, 0), 1)
+    : 0;
   const cues = result?.ontology_explanation?.text_cues ?? [];
 
   return (

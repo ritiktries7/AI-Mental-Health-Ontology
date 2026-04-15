@@ -1,0 +1,48 @@
+@prefix : <http://example.org/depression#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:DepressionOntology a owl:Ontology ;
+    rdfs:label "Simple depression ontology" .
+
+:Symptom a owl:Class ;
+    rdfs:label "Symptom" .
+
+:PHQ9_Item a owl:Class ;
+    rdfs:label "PHQ-9 item" .
+
+:Severity a owl:Class ;
+    rdfs:label "Severity" .
+
+:RiskLevel a owl:Class ;
+    rdfs:label "Risk level" .
+
+:hasSeverity a owl:ObjectProperty ;
+    rdfs:label "has severity" .
+
+:hasRisk a owl:ObjectProperty ;
+    rdfs:label "has risk" .
+
+# Example PHQ-9 items
+:LittleInterest a :PHQ9_Item ; rdfs:label "Little interest or pleasure in doing things" .
+:FeelingDown a :PHQ9_Item ; rdfs:label "Feeling down, depressed, or hopeless" .
+:SleepTrouble a :PHQ9_Item ; rdfs:label "Trouble falling or staying asleep" .
+:Fatigue a :PHQ9_Item ; rdfs:label "Feeling tired or having little energy" .
+:Appetite a :PHQ9_Item ; rdfs:label "Poor appetite or overeating" .
+:SelfBlame a :PHQ9_Item ; rdfs:label "Feeling bad about yourself" .
+:Concentration a :PHQ9_Item ; rdfs:label "Trouble concentrating" .
+:Psychomotor a :PHQ9_Item ; rdfs:label "Moving or speaking slowly or being fidgety" .
+:SuicidalThoughts a :PHQ9_Item ; rdfs:label "Thoughts of self-harm or better off dead" .
+
+# Severity individuals
+:Minimal a :Severity ; rdfs:label "Minimal" .
+:Mild a :Severity ; rdfs:label "Mild" .
+:Moderate a :Severity ; rdfs:label "Moderate" .
+:ModeratelySevere a :Severity ; rdfs:label "Moderately Severe" .
+:Severe a :Severity ; rdfs:label "Severe" .
+
+# Risk level individuals
+:Low a :RiskLevel ; rdfs:label "Low" .
+:Medium a :RiskLevel ; rdfs:label "Medium" .
+:High a :RiskLevel ; rdfs:label "High" .
